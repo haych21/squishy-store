@@ -1394,8 +1394,12 @@ p{
   justify-content:center;
 }
 
-.navbar .nav-links a{
-  margin:0 8px;
+
+
+.navbar .nav-links a {
+  font-size: 13px;
+  padding: 6px 10px;
+  margin: 0 4px;
 }
 
 
