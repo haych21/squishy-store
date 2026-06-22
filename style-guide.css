@@ -351,6 +351,19 @@ p {
   gap: 16px;
 }
 
+/* HAMBURGER */
+.hamburger {
+  display:none;
+  background: var(--color-primary);
+  color:white;
+  border:none;
+  border-radius:50%;
+  width:40px;
+  height:40px;
+  font-size:22px;
+  cursor:pointer;
+}
+
 /* ==========================================================================
    10. HERO SECTION SHOWCASE
    ========================================================================== */
@@ -1379,37 +1392,37 @@ p{
   font-size:15px;
 }
 
-
-
 /* NAVBAR */
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  padding: 12px;
+
+.nav-pill{
+  position:relative;
 }
 
-.navbar .brand {
-  flex-shrink: 0;
-  font-size: 16px;
+.hamburger{
+  display:block;
+  margin-left:auto;
 }
 
-.navbar .nav-links {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 6px;
+.nav-pill .links{
+  display:none;
+  width:100%;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  margin-top:15px;
 }
 
-.navbar .nav-links a {
-  margin: 0;
-  font-size: 12px;
-  padding: 5px 8px;
-  white-space: nowrap;
+.nav-pill .links.active{
+  display:flex;
 }
 
+.nav-pill .links a{
+  width:100%;
+  text-align:center;
+  background:var(--color-bg);
+  padding:10px;
+  border-radius:999px;
+}
 
 
 /* HERO */
