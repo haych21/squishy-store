@@ -1,44 +1,83 @@
-const carousel = document.querySelector('.home-carousel');
-const cards = carousel.querySelectorAll('.product-card');
-
-let index = 0;
-
-function getStep() {
-  const gap = 20;
-  return cards[0].offsetWidth + gap;
-}
+document.addEventListener("DOMContentLoaded", () => {
 
 
-setInterval(() => {
+  // =========================
+  // HOME CAROUSEL ONLY
+  // =========================
 
-  const step = getStep();
-
-  index++;
+  const carousel = document.querySelector('.home-carousel');
 
 
-  if (index > cards.length - 3) {
-    index = 0;
+  if (carousel) {
+
+    const cards = carousel.querySelectorAll('.product-card');
+
+    let index = 0;
+
+
+    function getStep() {
+
+      const gap = 20;
+
+      return cards[0].offsetWidth + gap;
+
+    }
+
+
+    setInterval(() => {
+
+
+      const step = getStep();
+
+
+      index++;
+
+
+      if (index > cards.length - 3) {
+
+        index = 0;
+
+      }
+
+
+      carousel.scrollTo({
+
+        left: index * step,
+
+        behavior: 'smooth'
+
+      });
+
+
+    }, 2500);
+
   }
 
 
-  carousel.scrollTo({
-    left: index * step,
-    behavior: 'smooth'
-  });
+
+  // =========================
+  // HAMBURGER ALL PAGES
+  // =========================
 
 
-}, 2500);
+  const hamburger = document.querySelector(".hamburger");
+
+  const menu = document.querySelector(".links");
 
 
-
-// HAMBURGER MENU
-
-const hamburger = document.querySelector(".hamburger");
-const menu = document.querySelector(".links");
+  if (hamburger && menu) {
 
 
-hamburger.addEventListener("click", () => {
+    hamburger.addEventListener("click", () => {
 
-  menu.classList.toggle("active");
+
+      menu.classList.toggle("active");
+
+
+    });
+
+
+  }
+
 
 });

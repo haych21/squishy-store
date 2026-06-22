@@ -1392,17 +1392,31 @@ p{
   font-size:15px;
 }
 
-/* NAVBAR */
+/* ==========================================================================
+
+   NAVBAR + HAMBURGER
+
+   ========================================================================== */
 
 .nav-pill{
+  flex-wrap:wrap;
   position:relative;
 }
 
 .hamburger{
   display:block;
   margin-left:auto;
+  background:var(--color-primary);
+  color:white;
+  border:none;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  font-size:22px;
+  cursor:pointer;
 }
 
+/* hide links initially */
 .nav-pill .links{
   display:none;
   width:100%;
@@ -1412,10 +1426,12 @@ p{
   margin-top:15px;
 }
 
+/* show when clicked */
 .nav-pill .links.active{
   display:flex;
 }
 
+/* mobile nav buttons */
 .nav-pill .links a{
   width:100%;
   text-align:center;
