@@ -673,8 +673,23 @@ p {
   align-items: flex-end;
 }
 
-.component-group h2 {
-  margin-top: 40px;
+.shop-category-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.shop-category-title h2 {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.shop-category-title img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
 }
 
 /* CARD FIX */
@@ -1353,14 +1368,6 @@ p {
   padding: 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
-}
-
-.contact-gif-right {
-  position:absolute;
-  width:200px;
-  right:-40px;
-  top:-20px;
-  pointer-events:none;
 }
 
 /* ==========================================================================
