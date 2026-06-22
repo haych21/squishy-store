@@ -1382,24 +1382,32 @@ p{
 
 
 /* NAVBAR */
-.navbar{
-  flex-direction:column;
-  gap:15px;
-  text-align:center;
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
 }
 
-.navbar .nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+.navbar .brand {
+  flex-shrink: 0;
+  font-size: 16px;
 }
 
-
+.navbar .nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+}
 
 .navbar .nav-links a {
-  font-size: 13px;
-  padding: 6px 10px;
-  margin: 0 4px;
+  margin: 0;
+  font-size: 12px;
+  padding: 5px 8px;
+  white-space: nowrap;
 }
 
 
